@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../static/images/favicon.png" rel="icon" />
+  <title>securly register</title>
+  <meta name="description" content="Login and Register Form Html Template">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Web Fonts
+========================= -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900'
+    type='text/css'>
+
+  <!-- Stylesheet
+========================= -->
+  <link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../static/vendor/font-awesome/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css" />
+  <!-- Colors Css -->
+  <link id="color-switcher" type="text/css" rel="stylesheet" href="#" />
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader preloader-dark">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <div id="main-wrapper" class="oxyy-login-register">
+    <div class="container-fluid px-0">
+      <div class="row g-0 min-vh-100">
+        <!-- Welcome Text
+      ========================= -->
+        <div class="col-md-4">
+          <div class="hero-wrap h-100">
+            <div class="hero-mask opacity-5 bg-dark"></div>
+            <div class="hero-bg hero-bg-scroll"
+              style="background-image:url('https://img.freepik.com/premium-vector/security-icon-with-lock-arrows-thin-linear_116137-5309.jpg?w=2000');">
+            </div>
+            <div class="hero-content mx-auto w-100 h-100">
+              <div class="container d-flex flex-column h-100">
+                <div class="row g-0 mt-3">
+                  <div class="col-11 col-lg-9 mx-auto">
+                    <h1 class="text-9 text-white fw-300 mb-5"><span class="fw-500">Welcome</span>, Looks like you're new
+                      here!</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Welcome Text End -->
+
+        <!-- Register Form
+      ========================= -->
+        <div class="col-md-8 d-flex flex-column align-items-center bg-dark">
+          <div class="container my-auto py-5">
+            <div class="row g-0">
+              <div class="col-11 col-md-8 col-lg-7 col-xl-6 mx-auto">
+                <p class="text-2 text-light">Already a member? <a class="fw-500" href="/login">Login</a></p>
+                <h3 class="text-white mb-4">Register Your Account</h3>
+                <div class="row g-0">
+                  {{ msg }}
+                </div>
+                <form id="registerForm" class="form-dark" method="post" action="{{ url_for('register') }}">
+                  <div class="mb-3">
+                    <label class="form-label text-light" for="fullName">Full Name</label>
+                    <input name="username" type="text" class="form-control" id="fullName" required
+                      placeholder="Enter Your Name">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-light" for="emailAddress">Email Address</label>
+                    <input name="email" type="email" class="form-control" id="emailAddress" required
+                      placeholder="Enter Your Email">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-light" for="loginPassword">Password</label>
+                    <input name="password" type="password" class="form-control" id="loginPassword" required
+                      placeholder="Enter Password">
+                  </div>
+                  <div class="form-check text-light my-4">
+                    <input id="agree" name="agree" class="form-check-input" type="checkbox">
+                    <label class="form-check-label" for="agree">I agree to the <a href="#">Terms</a> and <a
+                        href="#">Privacy Policy</a>.</label>
+                  </div>
+                  <button class="btn btn-primary shadow-none my-2" type="submit">Register</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Register Form End -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Style Switcher -->
+  <script src="../static/js/switcher.min.js"></script>
+  <script src="../static/js/theme.js"></script>
+</body>
+
+</html>
